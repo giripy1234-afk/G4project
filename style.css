@@ -33,7 +33,13 @@ body {
 }
 
 header {
-    padding: 1.75rem 0 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+    background: rgba(7, 16, 29, 0.94);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 header .container {
@@ -42,6 +48,14 @@ header .container {
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+}
+
+.hero {
+    padding: 2rem 0 0;
+}
+
+.hero .container {
+    margin-top: 1rem;
 }
 
 .brand {
@@ -88,6 +102,36 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.menu-toggle span {
+    width: 24px;
+    height: 2.5px;
+    background: var(--text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
 }
 
 nav a {

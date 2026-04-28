@@ -2,9 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".contact form");
     const navLinks = document.querySelectorAll("nav a[href^='#']");
     const yearEl = document.querySelector("footer .year");
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.querySelector(".nav-menu");
 
     if (yearEl) {
         yearEl.textContent = new Date().getFullYear();
+    }
+
+    // Mobile menu toggle
+    if (menuToggle) {
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
     }
 
     navLinks.forEach((link) => {
@@ -13,6 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const target = document.querySelector(link.getAttribute("href"));
             if (target) {
                 target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            // Close mobile menu when a link is clicked
+            if (menuToggle && menuToggle.classList.contains("active")) {
+                menuToggle.classList.remove("active");
+                navMenu.classList.remove("active");
             }
         });
     });

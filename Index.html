@@ -8,31 +8,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!------header---->
-        <header>
-            <div class="container">
-                <div class="brand">
-                    <div class="brand-mark">G4</div>
-                    <div class="brand-text">
-                        <span class="brand-name">G4 Networks</span>
-                        <span class="brand-tag">Traffic systems</span>
-                    </div>
+    <header>
+        <div class="container">
+            <div class="brand">
+                <div class="brand-mark">G4</div>
+                <div class="brand-text">
+                    <span class="brand-name">G4 Networks</span>
+                    <span class="brand-tag">Traffic systems</span>
                 </div>
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
             </div>
-        </header>
-    <div class="container" id="home">
-        <h1>Sensor Control On tarred road for traffic light navigation</h1>
-        <p>Welcome to our project on sensor control for traffic light navigation on tarred roads. This project aims to enhance traffic management and safety by utilizing advanced sensor technologies to optimize traffic light operations.</p>
-        <p>Our system uses a combination of sensors, including cameras, LIDAR, and radar, to monitor traffic flow and adjust traffic light timings accordingly. This helps reduce congestion, improve fuel efficiency, and enhance overall road safety.</p>
-    </div>
-    <section class="about">
+            <nav aria-label="Primary navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Sensor Control on Tarred Road for Traffic Light Navigation</h1>
+                <p>Welcome to our project on sensor control for traffic light navigation on tarred roads. This project aims to enhance traffic management and safety by utilizing advanced sensor technologies to optimize traffic light operations.</p>
+                <p>Our system uses a combination of sensors, including cameras, LIDAR, and radar, to monitor traffic flow and adjust traffic light timings accordingly. This helps reduce congestion, improve fuel efficiency, and enhance overall road safety.</p>
+            </div>
+        </section>
+        <section class="about" id="about">
         <div class="container">
             <h2>How It Works</h2>
             <p>Our traffic management solution collects live road data, analyzes vehicle movement, and adjusts signal timing dynamically to keep traffic flowing safely and efficiently.</p>
@@ -57,7 +59,7 @@
     </section>
 
     <!---section for our service-->
-    <section class="services" id="about">
+    <section class="services" id="services">
         <div class="container">
             <h2>Our Services</h2>
             <div class="service-item">
@@ -93,10 +95,11 @@
             </form>
         </div>
     </section>
+    </main>
     <!---footer section--->
     <footer>
         <div class="container">
-            <p>&copy; <span class="year"></span> Sensor Control On tarred road for traffic light navigation. All rights reserved.</p>
+            <p>&copy; <span class="year"></span> Sensor Control on tarred road for traffic light navigation. All rights reserved.</p>
         </div>
     </footer>
     <script src="script.js" defer></script>
